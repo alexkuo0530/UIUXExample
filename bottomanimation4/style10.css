@@ -1,0 +1,44 @@
+body{
+	font-family: impact;
+	background-color: #833ab4;
+	height: 100vh;
+	display: grid;
+	place-content: center;
+	margin: 0;
+	padding: 0;
+}
+
+.btn{
+	display: inline-block;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: #fff;
+	outline: 2px solid #fff;
+	padding: 30px 60px;
+	position: relative;
+	overflow: hidden;
+	transition: color 1s;
+}
+
+.btn:hover{
+	color: #833ab4;
+}
+
+.btn:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -50px;
+	width: 150%;
+	height: 100%;
+	background-color: #fff;
+	transform: scaleX(0) skewX(35deg);
+	transform-origin: left;
+	z-index: -1;
+	transition: transform 1s;
+}
+
+.btn:hover::before{
+	transform: scaleX(1) skewX(35deg);
+}
